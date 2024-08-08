@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(to right, #00796b, #004d40);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: fadeInDown 1s both;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #004d40;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #00796b;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            background-image: url(logo.jpg);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+            animation: slideInRight 1s both;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h2 {
+            margin: 0;
+            font-size: 3em;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s 0.5s both;
+        }
+
+        .hero p {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s 0.7s both;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s both;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            max-width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            text-align: center;
+            padding: 10px;
+            animation: slideInUp 0.4s both;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .service-content {
+            padding: 15px;
+            animation: fadeInUp 0.5s both;
+        }
+
+        .service-content h3 {
+            color: #00796b;
+            margin: 0;
+            animation: fadeInUp 0.6s both;
+        }
+
+        .service-content p {
+            line-height: 1.6;
+            margin-top: 10px;
+            animation: fadeInUp 0.7s both;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #004d40;
+            color: white;
+            animation: fadeInUp 0.8s both;
+        }
+
+        .footer a {
+            color: #ffab40;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+            animation: blink 1s infinite;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tentang Trip Organizer</h1>
+    </header>
+
+    <nav>
+        <a href="tpo.html">Beranda</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Rencanakan Perjalanan Impian Anda Bersama Kami!</h2>
+        <p>Jadikan perjalanan Anda tak terlupakan dengan layanan terbaik dari kami.</p>
+    </section>
+
+    <div class="services" id="tentang">
+        <div class="service-card">
+            <img src="pp.jpg" alt="Perbandingan porter dan peserta">
+            <div class="service-content">
+                <h3>Perbandingan Porter dan Peserta</h3>
+                <p>Untuk peserta wajib menggunakan porter, contoh: 2 peserta 1 porter atau 1 guide.</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="g1.jpg" alt="Customer">
+            <div class="service-content">
+                <h3>Customer</h3>
+                <p>Kebersamaan kami bersama customer yang kami abadikan pada malam hari setelah makan malam.</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="g2.jpg" alt="Customer">
+            <div class="service-content">
+                <h3>Customer</h3>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="g3.jpg" alt="Customer">
+            <div class="service-content">
+                <h3>Customer</h3>
+                <p>Salah satu foto yang kami ambil dan kami abadikan di gunung Sumbing.</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="g4.jpg" alt="Customer">
+            <div class="service-content">
+                <h3>Customer</h3>
+                <p>Customer kami yang dari luar negeri mempercayakan kami sebagai pemandu open trip pendakian gunung Bismo.</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="g5.jpg" alt="Customer">
+            <div class="service-content">
+                <h3>Customer</h3>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="g6.jpg" alt="Customer">
+            <div class="service-content">
+                <h3>Customer</h3>
+                <p>Customer kami yang dari USA mempercayakan kami sebagai pemandu open trip pendakian gunung Sindoro.</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="g7.jpg" alt="Customer">
+            <div class="service-content">
+                <h3>Customer</h3>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="g8.jpg" alt="Customer">
+            <div class="service-content">
+                <h3>Customer</h3>
+                <p>Customer kami yang dari luar negeri mempercayakan kami sebagai pemandu open trip pendakian gunung Sumbing.</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="g9.jpg" alt="Customer">
+            <div class="service-content">
+                <h3>Customer</h3>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="usa.jpg" alt="Customer">
+            <div class="service-content">
+                <h3>Customer</h3>
+                <p>Customer kami yang dari USA mempercayakan kami sebagai pemandu open trip pendakian gunung Sindoro.</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="chef1.jpg" alt="Hidangan Makanan">
+            <div class="service-content">
+                <h3>Hidangan Makanan Yang Kami Sajikan</h3>
+                <p>Kami sempat mengabadikan beberapa foto hidangan yang telah chef kami buat untuk disajikan kepada customer kami di gunung.</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="chef2.jpg" alt="Hidangan Makanan">
+            <div class="service-content">
+                <h3>Hidangan Makanan Yang Kami Sajikan</h3>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="chef3.jpg" alt="Hidangan Makanan">
+            <div class="service-content">
+                <h3>Hidangan Makanan Yang Kami Sajikan</h3>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="view.jpg" alt="View">
+            <div class="service-content">
+                <h3>View yang Kami Abadikan</h3>
+                <p>Kami mengabadikan salah satu view di gunung Prau.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Trip Organizer. All rights reserved. <a href="kontak.html">Kontak Kami</a></p>
+    </footer>
+</body>
+</html>

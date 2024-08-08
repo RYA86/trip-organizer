@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Organizer</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(to right, #00796b, #004d40);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: fadeInDown 1s both;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #004d40;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #00796b;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            background-image: url(logo.jpg);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+            animation: slideInRight 1s both;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h2 {
+            margin: 0;
+            font-size: 3em;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s 0.5s both;
+        }
+
+        .hero p {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s 0.7s both;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s both;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            max-width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            text-align: center;
+            padding: 10px;
+            animation: slideInUp 0.4s both;
+        }
+        
+        h4 span {
+            text-decoration: line-through;
+            font-size: 20px;
+            opacity: 0.6;
+            padding-left: 15px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: auto;
+            animation: slideInRight 1s both;
+        }
+
+        .service-content {
+            padding: 15px;
+            animation: fadeInUp 0.5s both;
+        }
+
+        .service-content h3 {
+            color: #00796b;
+            margin: 0;
+            animation: fadeInUp 0.6s both;
+        }
+
+        .service-content p {
+            line-height: 1.6;
+            margin-top: 10px;
+            animation: fadeInUp 0.7s both;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #004d40;
+            color: white;
+            animation: fadeInUp 0.8s both;
+        }
+
+        .footer a {
+            color: #ffab40;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+            animation: blink 1s infinite;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--navbar-->
+    <header>
+        <h1>Trip Organizer</h1>
+    </header>
+
+    <nav>
+        <a href="tpo.html">Beranda</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Rencanakan Perjalanan Impian Anda Bersama Kami!</h2>
+        <p>Jadikan perjalanan Anda tak terlupakan dengan layanan terbaik dari kami.</p>
+    </section>
+
+    <div class="services" id="layanan">
+        <div class="service-card">
+            <img src="tt.jpg" alt="Konsultasi Perjalanan">
+            <div class="service-content">
+                <h3>Konsultasi Perjalanan</h3>
+                <p>Rencanakan perjalanan yang disesuaikan dengan keinginan dan kebutuhan anda ,untuk menjadi mitra dan klien untuk meningkatkan kinerja dan daya saing ,perluasan network menjadi modal dalam bagian bisnis nasional untuk memenuhi jasa tour and travel. Kami menyediakan open trip gunung bismo ,gunung kembang ,dan gunung andong.
+                <h4>Untuk prioritas kami melayani open trip gunung sumbing ,gunung sindoro dan gunung prau</h4> untuk meeting point base camp minimal 10 orang ,1 orang Rp1.750.000.
+                </p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="ec.jpg" alt="Executive class">
+            <div class="service-content">
+                <h3>Executive Class</h3>
+                <h4>starting price</h4>
+                <h4>Rp2.800.000 <span>Rp3.199.000</span></h4>
+                <h3>out one person</h3>
+                <p>1. Executive Class banyak keuntungan yang disediakan class ini salah satu contoh porter ,meeting point rental outdor ,profesional chef gunung dan lain lain.</p>
+                <h3>jalur pendakian</h3>
+                <p>Via Garung ,Via Butuh ,via kaliangrik </p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="lc.jpg" alt="Transportasi Lokal">
+            <div class="service-content">
+                <h3>luxury class</h3>
+                <h4>starting price</h4>
+                <h4>Rp3.500.000 <span>Rp3.750.000</span></h4>
+                <h3>out one person</h3>
+                <p>2. Luxury class kami menyediakan transpotasi dari base camp sampai pos 1 gunung sumbing via  banyak keuntungan yang disediakan class ini salah satu contoh porter ,meeting point rental outdor ,profesional chef gunung dan Rp 3.500.000 perpack minimal 5 orang di bawah 5 orang harga bisa menyesuwaikan.</p>
+                <h3>jalur pendakian</h3>
+                <p>Via Garung, Via Butuh, via Kaliangkrik</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="ptc.jpg" alt="Private Trip Class">
+            <div class="service-content">
+                <h3>Private Trip Class</h3>
+                <h4>starting price</h4>
+                <h4>Rp1.750.000 <span>Rp1.999.000</span></h4>
+                <p>3. Private Trip Class banyak keuntungan daripada class yang lain, meeting point base camp minimal 10 orang, 1 orang Rp1.750.000.</p>
+                <h3>jalur pendakian</h3>
+                <p>Via Garung, Via Butuh, via Kaliangkrik</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="pp.jpg" alt="Perbandingan porter dan peserta">
+            <div class="service-content">
+                <h3>Perbandingan Porter dan Peserta</h3>
+                <p>Untuk peserta wajib pake porter contoh 2 peserta 1 porter atau 1 guide.</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <a href="https://www.instagram.com/basemoubing3371/">
+                <img src="ig.jpg" alt="Instagram">
+            </a>
+            <div class="service-content">
+                <h3>Instagram Resmi</h3>
+                <p>Info lebih lanjut bisa kunjungi Instagram kami dengan klik logo di atas.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Trip Organizer. All rights reserved.</p>
+        <p><a href="kontak.html">Hubungi Kami</a></p>
+    </footer>
+</body>
+</html>
